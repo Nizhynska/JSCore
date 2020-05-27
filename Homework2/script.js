@@ -69,10 +69,10 @@ let res = 0;
 
 for(let i = 0; i < sides.length; i++) {
     if(sides[i] !== maxNum ) {
-       res = res + Math.pow(sides[i]);
+       res = res + Math.pow(sides[i], 2);
     }
 }
-if (Math.pow(maxNum) === res) {
+if (Math.pow(maxNum, 2) === res) {
     alert("Трикутник прямокутний");
 }
 
