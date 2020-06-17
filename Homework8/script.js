@@ -20,9 +20,59 @@ checkEmail("Qmail2@gmail.com");
 //task3
 
 function findLet(str) {
-    if (str.match(/db+d/gi)) {
-        alert(str.match(/db+d/gi));
-    } else return("no matches");
+    let d= /d(b+)(d+)/gi;
+    console.log(d.exec(str));
+
+}
+findLet("cdbBdbsbz" );
+
+//task4
+
+function revert(str) {
+let result = str.replace(/(\w+) (\w+)/, (match, first, second) => `${second}, ${first}`);
+
+alert(result);
+}
+revert("Java Script");
+
+//task5
+function validateCreditCardNumber(num){
+    var regexp = /(?:\d{4}[ -]?){3}(?=\d{4}\b)/gm;
+    if(regexp.test(num)) {
+        console.log("your data is correct");
+    } else console.log("your data is not correct");
+}
+validateCreditCardNumber("9999-9999-9999-9999");
+
+//task6
+
+function mailValedation(mail) {
+    let re = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+    if(re.test(String(mail).toLowerCase())) {
+        console.log("Email is correct!");
+    } else console.log("Email is not correct!");
+}
+mailValedation("mail@gmail.com");
+
+//task7
+function checkLogin(login) {
+    let re = /^[a-zA-Z][a-zA-Z0-9-_\.-?\d+(\.\d{0,})?]{2,10}$/;
+    if(re.test(login)){
+        (console.log("true"));
+    } else {
+        (console.log("false"));
+        
+    }
+     console.log(login.replace(/[^0-9\.-]+/g,""));
+   
+
+
 }
 
-findLet("cdbBdbsbz" );
+checkLogin('ee1.1ret3');
+
+
+checkLogin('ee1--1ret3');
+
+
+
