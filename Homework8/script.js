@@ -47,12 +47,12 @@ validateCreditCardNumber("9999-9999-9999-9999");
 //task6
 
 function mailValedation(mail) {
-    let re = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+    let re = /^\w+([\.-]?w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(re.test(String(mail).toLowerCase())) {
         console.log("Email is correct!");
     } else console.log("Email is not correct!");
 }
-mailValedation("mail@gmail.com");
+mailValedation("mai--l@gmail.com");
 
 //task7
 function checkLogin(login) {
