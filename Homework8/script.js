@@ -52,7 +52,7 @@ function mailValedation(mail) {
         console.log("Email is correct!");
     } else console.log("Email is not correct!");
 }
-mailValedation("mai--l@gmail.com");
+mailValedation("mail@gmail.com");
 
 //task7
 function checkLogin(login) {
