@@ -10,15 +10,16 @@
 </head>
 <body>
     <main class="main">
-        <form action="" method="get" class="form">
+        <form class="form">
             <p class="form_heading">Please enter information</p>
-            <input type="text" placeholder="Enter your name" name="name" class="form_information-item" required>
-            <input type="text" placeholder="Enter your surname" name="surname" class="form_information-item" required>
-            <input type="text" placeholder="Enter your age" name="age" class="form_information-item" required>
-            <input type="text" placeholder="Your education" name="education" class="form_information-item" required>
-            <input type="text" placeholder="Your profession" name="profession" class="form_information-item" required>
-            <button class="form_submit">Submit</button>    
+            <input type="text" placeholder="Enter your name" name="name" id = "name" class="form_information-item" minlength="2" maxlength ="60" required>
+            <input type="text" placeholder="Enter your surname" name="surname" id = "surname" class="form_information-item" minlength="2" maxlength ="60" required>
+            <input type="text" placeholder="Enter your age" name="age" id="age" class="form_information-item" minlength="2" maxlength ="60" required>
+            <input type="text" placeholder="Your education" name="education" id="education" class="form_information-item" minlength="2" maxlength ="60" required>
+            <input type="text" placeholder="Your profession" name="profession" id="profession" class="form_information-item" minlength="2" maxlength ="60" required>
+            <button class="form_submit" id="form_submit">Submit</button>    
         </form>
     </main>
+    <script src="./script.js"></script>
 </body>
 </html>

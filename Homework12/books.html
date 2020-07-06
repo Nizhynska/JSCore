@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="downBook" onclick="downBook()">Download books</button>
+    <script>
+        function downBook() {
+          const xhr = new XMLHttpRequest();
+    
+          xhr.open('GET', 'books.json', true);  // 
+    
+          xhr.onreadystatechange = function() { // (3)
+            if (xhr.readyState != 4) return;
+    
+            if (xhr.status != 200) {
+              // error processing
+              alert('Error ' + xhr.status + ': ' + xhr.statusText);
+            } else {
+              // display result    
+              let list = document.createElement('ul'); 
+              document.body.prepend(list);  
+              let booksObj = JSON.parse(xhr.responseText);
+              for (let key in booksObj.books) {
+                let li = document.createElement('li');
+                li.innerHTML = booksObj.books[key].author;
+                list.prepend(li);
+              }  
+              document.getElementById("downBook").style.display = "none";
+            }
+
+          }
+          xhr.send();
+        }
+      </script>
+</body>
+</html>
