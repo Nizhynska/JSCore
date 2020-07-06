@@ -25,6 +25,7 @@ if (ifConnected) {
         document.getElementById("age").value = localStorage.getItem("age");
         document.getElementById("education").value = localStorage.getItem("education");
         document.getElementById("profession").value = localStorage.getItem("profession");
+        localStorage.clear();
         }
 }
 document.getElementById("form_submit").addEventListener("click", addToStorage);
