@@ -1,13 +1,3 @@
-/*var ifConnected = window.navigator.onLine;
-if (ifConnected) {
-  alert('Connection available');
-} else {
-    let name = localStorage.setItem("name", document.getElementById("name").value);
-    let surname = localStorage.setItem("surname", document.getElementById("surname").value);
-    let age = localStorage.setItem("age", document.getElementById("age").value);
-    let education = localStorage.setItem("education", document.getElementById("education").value);
-    let profession = localStorage.setItem("profession", document.getElementById("profession").value);
-} */
 function setToStorage() {
     document.getElementById("name").value = localStorage.getItem("name");
     document.getElementById("surname").value = localStorage.getItem("surname");
